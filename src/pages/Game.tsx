@@ -51,13 +51,14 @@ const App = () => {
     const newScores = { ...scores };
     newScores[currentPlayer] = scores[currentPlayer] + 1;
     setScores(newScores);
-
+    setCurrentPlayer("x");
     resetBoard();
   };
 
   //function for handling the draw state
   const handleDraw = () => {
     window.alert("The game ended in a draw");
+    setCurrentPlayer("x");
     resetBoard();
   };
 
